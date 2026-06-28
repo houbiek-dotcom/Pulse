@@ -6,12 +6,19 @@
     "backend"
   ],
   "scripts": {
-    "frontend:install": "npm install --prefix frontend",
-    "backend:install": "npm install --prefix backend",
-    "install-all": "npm run frontend:install && npm run backend:install",
+    "install-all": "npm install --prefix frontend && npm install",
     "frontend:build": "npm run build --prefix frontend",
     "frontend:dev": "npm run dev --prefix frontend",
     "backend:dev": "npm run dev --prefix backend",
-    "start": "npm run start --prefix backend"
+    "start": "node api/index.js",
+    "vercel-build": "npm install && cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.3",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "stripe": "^22.2.2"
   }
 }
