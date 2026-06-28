@@ -1,6 +1,7 @@
 {
   "name": "pulse",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "node backend/server.js",
     "start": "node api/index.js",
