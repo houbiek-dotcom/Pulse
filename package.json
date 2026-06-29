@@ -6,6 +6,7 @@
     "dev": "node backend/server.js",
     "start": "node api/index.js",
     "build": "cd frontend && npm install && npm run build",
+    "postinstall": "cd frontend && npm install && npm run build",
     "vercel-build": "npm install && cd frontend && npm install && npm run build"
   },
   "dependencies": {
